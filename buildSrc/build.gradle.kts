@@ -16,6 +16,6 @@ repositories {
 
 dependencies{
     // 预编译插件所需的外部插件必须先在此引入 https://docs.gradle.org/current/userguide/custom_plugins.html#applying_external_plugins_in_precompiled_script_plugins
-    implementation("io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE")
+    implementation("io.freefair.gradle:lombok-plugin:6.1.0-m3")
     implementation("org.springframework.boot:spring-boot-gradle-plugin:2.5.3")
 }

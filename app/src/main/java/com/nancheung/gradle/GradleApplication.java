@@ -1,11 +1,11 @@
-package com.example.gradle;
+package com.nancheung.gradle;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GradleDemoKotlinApplication {
+public class GradleApplication {
     public static void main(String[] args) {
-        SpringApplication.run(GradleDemoKotlinApplication.class, args);
+        SpringApplication.run(GradleApplication.class, args);
     }
 }

@@ -4,8 +4,7 @@ plugins {
     java
     `java-library`
     `maven-publish`
-    id("io.spring.dependency-management")
-    id("org.springframework.boot")
+    id("io.freefair.lombok")
 }
 
 repositories {
@@ -22,12 +21,16 @@ version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_16
 
 dependencies {
-//    implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
-    compileOnly("org.projectlombok:lombok")
-    annotationProcessor("org.projectlombok:lombok")
+    implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
+//    compileOnly("org.projectlombok:lombok")
+//    annotationProcessor("org.projectlombok:lombok")
 }
 
 configurations {
+    subprojects{
+        apply(plugin = "dependencies-manager")
+    }
+
     compileOnly {
         extendsFrom(configurations.annotationProcessor.get())
     }

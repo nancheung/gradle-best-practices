@@ -1,5 +1,14 @@
-rootProject.name = "gradle-demo-kotlin"
+@file:Suppress("UnstableApiUsage")
 
 enableFeaturePreview("VERSION_CATALOGS")
 
-include("model-1","api","core")
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("libs.versions.toml"))
+        }
+    }
+}
+
+rootProject.name = "gradle-best-practices"
+include("core","api","app")
