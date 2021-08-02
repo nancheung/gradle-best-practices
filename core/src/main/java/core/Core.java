@@ -1,8 +1,8 @@
 package core;
 
-import lombok.Value;
+import lombok.Data;
 
-@Value
+@Data
 public class Core {
     Long id;
 }
